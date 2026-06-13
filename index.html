@@ -76,7 +76,12 @@
         .playlist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 30px; }
         .lista-box { background: rgba(255,255,255,0.1); border: 2px solid #3b82f6; padding: 15px; border-radius: 12px; text-decoration: none; color: white; display: block; font-weight: bold; transition: 0.3s; }
         
-        .felnott-section { background: rgba(30, 58, 138, 0.4); padding: 40px; border-radius: 25px; border: 2px solid #fbbf24; margin-top: 50px; }
+        /* FELNŐTT SZEKCIÓ ÉS GOMBOK SZEBB ELRENDEZÉSE */
+        .felnott-section { background: rgba(30, 58, 138, 0.4); padding: 30px 20px; border-radius: 25px; border: 2px solid #fbbf24; margin-top: 15px; }
+        .felnott-gombok { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 5px; }
+        .felnott-btn { color: #fbbf24; font-weight: bold; text-decoration: none; border: 2px solid #fbbf24; padding: 12px 25px; border-radius: 8px; transition: 0.3s; background: rgba(0,0,0,0.2); min-width: 180px; display: inline-block; }
+        .felnott-btn:hover { background: #fbbf24; color: #0d1b2a; }
+
         .subscribe-section { background: #f1f8fe; color: #1c2541; padding: 40px; border-radius: 30px; margin: 50px 0; border: 4px solid #fbbf24; }
         .sub-btn { background: #ff0000; color: white; padding: 18px 40px; border: none; border-radius: 50px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 18px; margin-top: 15px; }
         .back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #1e3a8a; color: white; width: 60px; height: 60px; border-radius: 50%; border: 3px solid #fbbf24; text-decoration: none; font-size: 30px; display: flex; align-items: center; justify-content: center; z-index: 1000; }
@@ -98,6 +103,8 @@
             .header-text { max-width: 100%; }
             .header-quote-center { position: relative; left: 0; top: 0; transform: none; max-width: 100%; margin: 20px 0; }
             .kandur-walking-figure { width: 300px; bottom: -150px; right: 0px; }
+            .felnott-gombok { flex-direction: column; align-items: center; }
+            .felnott-btn { width: 80%; }
         }
     </style>
 </head>
@@ -141,7 +148,7 @@
 
     <h2 class="section-title">🎬 Aktuális kedvenc</h2>
     <a href="https://youtu.be/IJ3RSOucyFs" target="_blank" class="featured-card">
-        <img src="https://img.youtube.com/vi/IJ3RSOucyFs/maxresdefault.jpg" alt="Aktuális kedvenc">
+        <img src="https://img.youtube.com/vi/IJ3RSOucyFs/maxresdefault.jpg" alt="Aktvális kedvenc">
     </a>
 
     <h2 class="section-title">🔥 Népszerű videók</h2>
@@ -175,9 +182,13 @@
         <a href="https://www.youtube.com/playlist?list=PLcwQqd8qA-xeFvHCKh6s4NMRglmvOn6GL" target="_blank" class="lista-box">AI dalok</a>
     </div>
 
+    <h2 class="section-title">Felnőtteknek</h2>
     <div class="felnott-section">
-        <h2 style="color: #fbbf24; margin-top: 0;">✨ Versdalok felnőtteknek</h2>
-        <a href="https://www.youtube.com/playlist?list=PLcwQqd8qA-xe27efJZExhDSJh08zcK4UW" target="_blank" style="color: #fbbf24; font-weight: bold; text-decoration: none; border: 1px solid #fbbf24; padding: 10px 20px; border-radius: 8px;">Megnyitás →</a>
+        <div class="felnott-gombok">
+            <a href="https://www.youtube.com/playlist?list=PLcwQqd8qA-xe27efJZExhDSJh08zcK4UW" target="_blank" class="felnott-btn">Versdalok →</a>
+            <a href="https://www.youtube.com/playlist?list=PLcwQqd8qA-xfLbtB9KwwptbCwvRsPRo_y" target="_blank" class="felnott-btn">Numerológia →</a>
+            <a href="https://www.youtube.com/playlist?list=PLcwQqd8qA-xeA3a2FM4eiHt0n2pAbiRIp" target="_blank" class="felnott-btn">Gondolatvideók →</a>
+        </div>
     </div>
 
     <div class="subscribe-section">
